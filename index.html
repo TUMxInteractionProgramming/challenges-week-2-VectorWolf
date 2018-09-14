@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
 
+    <link rel="stylesheet" href="style.css" />
     <!-- #1 #structure #title -->
     <title>chatter|app</title>
 
@@ -12,78 +13,9 @@
     <!-- #2 #css #elements -->
     <style>
 
-        /* #2 #colorful #palette is:
-          * Background: #F5F5F5 (GREY 100)
-          * Primary Text: black
-
-          * Primary color: #3F51B5 (INDIGO)
-          * Primary color_text : white
-          * Accent color: #CDDC39 (LIME)
-          * Accent color_text: black
-          */
-
-        /*global styles */
-        * {
-            /* #2 #font #faces */
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            /* #2 #colorful #background */
-            background-color: #F5F5F5;
-        }
-
-        h1 {
-            /* #2 #colourful #app-bar */
-            background-color: #3F51B5;
-            color: white;
-        }
-
-        button {
-            /* #2 #colourful #plusfive */
-            background-color: #CDDC39;
-            color: black;
-            /* #2 #font capital #letters */
-            text-transform: uppercase;
-        }
 
 
-        /*styles for channel area*/
-        h2 {
-            /* #2 #colorful #channelandchat */
-            background-color: white;
-        }
 
-        /*styles for chat area*/
-        p {
-            /* #2 #colorful #channelandchat */
-            background-color: white;
-        }
-
-        strong {
-            /* #2 #font #locations need an extra element, we'll use strong for w3w locations */
-            text-transform: uppercase;
-        }
-
-        h3 {
-            /* #2 #font #metadata is now medium */
-            font-size: medium;
-        }
-
-        div {
-            width: 80%;
-        }
-        
-        a {
-            /*primary text color*/
-            color: black;
-        }
-
-        em {
-            /* #2 #font #remaining overrides the default italic appearance of em elements*/
-            font-size: larger;
-            font-style: normal;
-        }
 
     </style>
 
@@ -93,13 +25,15 @@
 
 <!-- channel area -->
 <!-- #1 #channels #app-bar -->
+<div id="app-bar">
 <h1><img src="https://ip.lfe.mw.tum.de/sections/moocus.png"
 style="height:56px;" alt="Duck!">chatter|app</h1>
+</div>
 
 <!-- #1 #channels #topics -->
 <ul style="list-style-type:none; background-color:white;">
     <li>#Yummy<img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="Star"></li>
-<li>#SevenContinents<img src="https://ip.lfe.mw.tum.de/sections/star-o.png"
+<li class="selected">#SevenContinents<img src="https://ip.lfe.mw.tum.de/sections/star-o.png"
     alt="Star2"></li>
 <li>#KillerApp<img src="https://ip.lfe.mw.tum.de/sections/star.png" alt="Star"></li>
 <li>#FirstPersonOnMars<img src="https://ip.lfe.mw.tum.de/sections/star.png"
@@ -109,27 +43,30 @@ style="height:56px;" alt="Duck!">chatter|app</h1>
 </ul>
 
 <!-- #1 #channels #buttons -->
-<span style="background-color:white;">
-    <button><img src="https://ip.lfe.mw.tum.de/sections/lightbulb-o.png"
+<div id="tab-bar">
+    <button class="selected"><img src="https://ip.lfe.mw.tum.de/sections/lightbulb-o.png"
     alt="lightbulb-icon">new</button>
     <button><img src="https://ip.lfe.mw.tum.de/sections/fire.png"
     alt="fire-icon">trending</button>
     <button><img src="https://ip.lfe.mw.tum.de/sections/star.png"
     alt="star-icon">favorites</button>
-</span>
+</div>
 
 
 <!-- chat area -->
 <!-- #1 #chat #name -->
+<div>
 <h1>#SevenContinents
     <!-- #1 #chat #location is wrapped in small tag-->
     <small>by
         <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
         <strong>cheeses.yard.applies</strong>
     </small>
+    <img src="https://ip.lfe.mw.tum.de/sections/star-o.png" alt="Star">
 </h1>
+</div>
 
-<div>
+<div class="message own">
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
 <h3>
     <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
@@ -145,7 +82,7 @@ style="height:56px;" alt="Duck!">chatter|app</h1>
 <button>+5 min.</button>
 </div>
 
-<div>
+<div class="message">
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
 <h3>
     <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
@@ -162,7 +99,7 @@ style="height:56px;" alt="Duck!">chatter|app</h1>
 <button>+5 min.</button>
 </div>
 
-<div>
+<div class="message">
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
 <h3>
     <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
@@ -178,7 +115,7 @@ style="height:56px;" alt="Duck!">chatter|app</h1>
 <button>+5 min.</button>
 </div>
 
-<div>
+<div class="message">
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
 <h3>
     <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
@@ -194,7 +131,7 @@ style="height:56px;" alt="Duck!">chatter|app</h1>
 <button>+5 min.</button>
 </div>
 
-<div>
+<div class="message">
 <!-- #1 #chat #metadata contains location, weekday, day, and time -->
 <h3>
     <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
@@ -210,7 +147,7 @@ style="height:56px;" alt="Duck!">chatter|app</h1>
 <button>+5 min.</button>
 </div>
 
-<div>
+<div class="message">
 <!-- #1 #chat #metadata contains location, weekday, day, and time  -->
 <h3>
     <!-- #2 #font #locations need an extra element, we'll use strong for w3w locations -->
